@@ -44,6 +44,6 @@ Nos vamos a cualquier navegador, y colocamos en la barra de busquedas localhost:
 
 Deberías de ver lo siguiente:
 
-
+Resultado Reto 2.png
 
 Listo, ya tienes listo tu aplicación web desplegada
