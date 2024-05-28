@@ -23,14 +23,12 @@ COMANDOS A UTILIZAR:
 ### Crear contenedor BACKEND
 COMANDOS A UTILIZAR:
 
-        $docker run --name= teemii-backend --env=POSTGRES_HOST=postgres --env=POSTGRES_USER=postgres
-        --env=POSTGRES_PASSWORD=12345
-        --env=POSTGRES_DB=postgres -p 3000:3000 -d dokkaner/teemii-backend:develop
+        $docker run --name=teemii-backend --env=POSTGRES_HOST=postgres --env=POSTGRES_USER=postgres --env=POSTGRES_PASSWORD=12345 --env=POSTGRES_DB=postgres -p 3000:3000 -d dokkaner/teemii-backend:develop
 
-### Crear contenedor BACKEND
+### Crear contenedor FRONTEND
 COMANDOS A UTILIZAR:
 
-        $docker run --name= teemii-backend -p 8080:80 -d dokkaner/teemii-frontend:develop
+        $docker run --name=teemii-frontend -p 8080:80 -d dokkaner/teemii-frontend:develop
         
 ### Conectar contenedores a la red
 COMANDOS A UTILIZAR:
@@ -38,7 +36,12 @@ COMANDOS A UTILIZAR:
         $docker network connect teemii-network postgres
         $docker network connect teemii-network teemii-backend
         $docker network connect teemii-network teemii-frontend
+        
+### Arrancar FRONTEND
+COMANDOS A UTILIZAR:
 
+        $docker start teemii-frontend
+        
 ### COMPROBACIÓN EN EL NAVEGADOR
 Nos vamos a cualquier navegador, y colocamos en la barra de busquedas localhost:8080
 
